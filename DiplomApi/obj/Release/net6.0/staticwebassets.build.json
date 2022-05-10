@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "RWtlXnCeQxVtDXBQ80/vzH+aJ4Xm7l5LPr1bRaCDbOo=",
+  "Source": "DiplomApi",
+  "BasePath": "_content/DiplomApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "DiplomApi\\wwwroot",
+      "Source": "DiplomApi",
+      "ContentRoot": "C:\\Users\\123\\source\\repos\\DiplomApi\\DiplomApi\\wwwroot\\",
+      "BasePath": "_content/DiplomApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\123\\source\\repos\\DiplomApi\\DiplomApi\\wwwroot\\index1.html",
+      "SourceId": "DiplomApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\123\\source\\repos\\DiplomApi\\DiplomApi\\wwwroot\\",
+      "BasePath": "_content/DiplomApi",
+      "RelativePath": "index1.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index1.html"
+    }
+  ]
+}
