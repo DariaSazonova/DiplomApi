@@ -14,6 +14,26 @@ namespace DiplomApi.Controllers
         {
             return db.MediaFiles.ToList();
         }
+
+        [HttpGet("{type}")]
+        public IEnumerable<MediaFile> Get(string type= "SpecialityInformation")
+        {
+            return db.MediaFiles.Where(a => a.Midiatype == type).ToList();
+        }
+
+        //[HttpPut("{type}")]
+        //public async Task<ActionResult<MediaFile>> Put(string type = "SpecialityInformation")
+        //{
+
+        //    var list = db.MediaFiles.Where(a => a.Midiatype == type).ToList();
+        //    foreach (var item in list)
+        //    {
+        //        item.Path.Replace("\r", "\n");
+        //        db.Update(item);
+        //        await db.SaveChangesAsync();
+        //    }
+        //    return Ok();
+        //}
         [HttpPut]
         public async Task<ActionResult<MediaFile>> Put(MediaFile MediaFile)
         {
