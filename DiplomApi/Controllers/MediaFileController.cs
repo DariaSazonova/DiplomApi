@@ -10,16 +10,16 @@ namespace DiplomApi.Controllers
     {
         diplom1Context db = new();
         [HttpGet]
-        public IEnumerable<MediaFile> Get()
-        {
-            return db.MediaFiles.ToList();
-        }
-
-        [HttpGet("{type}")]
-        public IEnumerable<MediaFile> Get(string type= "SpecialityInformation")
+        public IEnumerable<MediaFile> Get(string type = "file")
         {
             return db.MediaFiles.Where(a => a.Midiatype == type).ToList();
         }
+
+        //[HttpGet("{type}")]
+        //public IEnumerable<MediaFile> Get(string type= "SpecialityInformation")
+        //{
+        //    return db.MediaFiles.Where(a => a.Midiatype == type).ToList();
+        //}
 
         //[HttpPut("{type}")]
         //public async Task<ActionResult<MediaFile>> Put(string type = "SpecialityInformation")

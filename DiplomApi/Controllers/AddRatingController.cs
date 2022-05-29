@@ -47,7 +47,13 @@ namespace DiplomApi.Controllers
                         level = q.IdQuest.ToString(),
                         date = q.Date
                     }).ToList();
-                    foreach(var item in list)
+
+                    foreach (var el in list.Where(s=>s.ResultText=="Нет данных").ToList())
+                    {
+                        list.Remove(el);
+                    }
+
+                    foreach (var item in list)
                     {
                         bool t1= double.TryParse(item.ResultText, out forParse);
                         if (t1)
@@ -89,6 +95,7 @@ namespace DiplomApi.Controllers
                     }
                 }
                 else list = null;
+                list = list.OrderByDescending(d => d.date).ToList();
                 return list;
             }
             else return null;
